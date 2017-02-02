@@ -1,7 +1,7 @@
 // @flow
-import type {Config, Path, TransformOptions, Transformer} from './jest-types';
 import crypto from 'crypto';
 import yaml from 'js-yaml';
+import type {Config, Path, TransformOptions, Transformer} from './jest-types';
 
 const getCacheKey = (
   fileData: string,
@@ -30,4 +30,4 @@ const transformer: Transformer = {
   process,
 };
 
-export default transformer;
+module.exports = transformer;
