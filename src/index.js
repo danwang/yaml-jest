@@ -22,7 +22,8 @@ const process = (
   options?: TransformOptions,
 ): string => {
   const result: string = yaml.safeLoad(sourceText);
-  return JSON.stringify(result, undefined, '\t');
+  const json = JSON.stringify(result, undefined, '\t');
+  return `module.exports = ${json}`;
 };
 
 const transformer: Transformer = {
