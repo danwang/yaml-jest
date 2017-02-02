@@ -29,3 +29,5 @@ const transformer: Transformer = {
   getCacheKey,
   process,
 };
+
+export default transformer;
