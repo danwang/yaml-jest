@@ -11,7 +11,7 @@ const getCacheKey = (
 ): string => {
   return crypto.createHash('md5')
     .update(fileData)
-    .update(configString)
+    .update(typeof configString === 'string' ? configString : JSON.stringify(configString))
     .digest('hex');
 };
 
