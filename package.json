@@ -7,6 +7,7 @@
     "flow": "flow",
     "lint": "eslint src",
     "build": "yarn transpile && yarn copy-packagejson && yarn copy-flow",
+    "prepare": "yarn build",
     "transpile": "babel ./src --out-dir ./dist/",
     "copy-packagejson": "cp package.json ./dist",
     "copy-flow": "cd src && pax -wrs'/\\.js$/\\.js\\.flow/' *.js ../dist"
