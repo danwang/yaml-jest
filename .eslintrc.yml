@@ -1,3 +1,0 @@
----
-extends: 'stripe'
-parser: 'babel-eslint'
