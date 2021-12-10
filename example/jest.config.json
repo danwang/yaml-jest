@@ -1,0 +1,6 @@
+{
+  "moduleFileExtensions": ["js", "yaml"],
+  "transform": {
+    "\\.yaml$": "yaml-jest"
+  }
+}
