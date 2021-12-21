@@ -1,5 +1,5 @@
 {
-  "name": "@danwang/yaml-jest",
+  "name": "yaml-jest",
   "version": "1.2.0",
   "description": "A YAML transform for jest",
   "main": "dist/index.js",

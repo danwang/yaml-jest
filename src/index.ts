@@ -19,7 +19,7 @@ const getCacheKey = (
     .digest("hex");
 };
 
-const process = (
+export const process = (
   sourceText: string,
   sourcePath: Path,
   config: Config,
