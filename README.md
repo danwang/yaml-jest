@@ -3,7 +3,7 @@ A YAML transform for [Jest](https://facebook.github.io/jest/)
 
 # Install
 ```
-yarn install --dev yaml-jest
+yarn add --dev yaml-jest
 ```
 
 # Usage
