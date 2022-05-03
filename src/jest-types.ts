@@ -6,6 +6,10 @@ export type TransformOptions = {
   watch: boolean;
 };
 
+export type TransformedSource = {
+  code: string;
+};
+
 export type Transformer = {
   canInstrument?: boolean;
 
@@ -21,5 +25,5 @@ export type Transformer = {
     sourcePath: Path,
     config: Config,
     options?: TransformOptions
-  ) => string;
+  ) => TransformedSource;
 };

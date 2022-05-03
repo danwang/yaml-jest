@@ -1,6 +1,6 @@
 import * as crypto from "crypto";
 import * as yaml from "js-yaml";
-import type { Config, Path, TransformOptions, Transformer } from "./jest-types";
+import type { Config, Path, TransformOptions, TransformedSource, Transformer } from "./jest-types";
 
 const getCacheKey = (
   fileData: string,
@@ -24,10 +24,12 @@ export const process = (
   sourcePath: Path,
   config: Config,
   options?: TransformOptions
-): string => {
+): TransformedSource => {
   const result = yaml.load(sourceText);
   const json = JSON.stringify(result, undefined, "\t");
-  return `module.exports = ${json}`;
+  return {
+    code: `module.exports = ${json}`
+  };
 };
 
 const transformer: Transformer = {
